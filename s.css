@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    column-gap: 35px;
+    font-family: Helvetica, sans-serif;
+    font-size: small;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    width: 100%;
+    color: blanchedalmond;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .styles{
+    font-size: 30px;
+  }
+  
+  .image {
+    padding-right: 25px;
+    margin-left: 50%;
+    height: 55%;
+    width: 55;
+    justify-content: space-between;
+  }
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    width:100%;
+  }
