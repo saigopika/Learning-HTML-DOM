@@ -27,9 +27,8 @@ background-color:black;`
  // login 
  let d=document.createElement('div');
  d.style.display = "none";
- d.style.cssText=`position: absolute;
+ d.style.cssText +=`position: absolute;
  top:50%;
- display:none;
  transform:translate(-50%,-50%);
 left:50%;
 background-color: black;
@@ -71,7 +70,7 @@ btn.textContent='Login';
 btn.addEventListener('click',handleClick);
 
 function handleClick(event) {
-       d.style.display = "block";
+       d.style.display = "block";
        main.style.opacity=0.5;
  
 }
@@ -90,34 +89,41 @@ document.body.appendChild(d);
 
 //form and input
  let form = document.createElement("form");
-     form.style.cssText =`display:flex; flex-direction:column;
-    row-gap:10px; align-items:center;`              
+     form.style.cssText =`display:flex; flex-direction:column;
+    row-gap:10px; align-items:center;`   
+    form.setAttribute('name','fname');           
     let n=document.createElement('input');
     n.setAttribute('type','text');
-    n.setAttribute('placeHolder','email id');
+    n.setAttribute('name','email');
+    n.setAttribute('placeHolder','Email Address');
     n.style.cssText=`margin-top:50px;`
     let p=document.createElement('input');
     p.setAttribute('type','text');
     p.setAttribute('placeHolder','password');
     let s = document.createElement("input");
-                s.setAttribute("type", "submit");
+                s.setAttribute("type", "submit");
     s.addEventListener('click',loginSubmit);
    
    //submit function
     function loginSubmit(e)
-  {
+  {    
+    let x = document.fname.email.value;
+    if (x == "") {
+      alert("Name must be filled out");
+    }
+      else{
         e.preventDefault();
         d.style.display='none';
         main.style.opacity=1;
-       
+      }
   }
 
   //creating close button
 
    let clos =document.createElement('p')
     clos.textContent="X" ;
-   clos.style.cssText=`color:white;float:right;font-size:15px;
-   font-weight:bold;margin:top:0; `
+   clos.style.cssText=`color:white;float:right;font-size:18px;
+   font-weight:bold;margin-top:6px; margin-right:10px;`
     clos.addEventListener('click',loginSubmit);
 
     
