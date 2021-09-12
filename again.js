@@ -21,7 +21,7 @@ padding-right:20px;
  display:flex;`
  nav.style.cssText=`display:flex;
 width:100%; 
-height:100px;
+height:110px;
 background-color:black;`
 
  // login 
