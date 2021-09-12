@@ -13,6 +13,7 @@ const getProps = (text) => {
 };
 header1.appendChild(getProps("Sorty"));
 header1.appendChild(getProps("Features"));
+header1.appendChild(getProps("Features"));
 header1.appendChild(getProps("Pricing"));
 header1.appendChild(getProps("Resources"));
 header1.classList.add("navbar");
